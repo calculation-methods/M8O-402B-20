@@ -112,7 +112,6 @@ def implicit(K, t, tau, h, a1, b1, c1, x, approx):
 
     return U
 
-#Схема Кранка-Николсона
 def Krank_Nikolson(K, t, tau, h, a1, b1, c1, x, approx, theta):
     N = len(x)
     if theta == 0:
