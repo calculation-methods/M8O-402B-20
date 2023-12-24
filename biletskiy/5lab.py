@@ -1,7 +1,6 @@
 #Вариант №10
 import numpy as np
 
-
 def analyt_func(x, a, b, c, t):
     return np.exp((c - a)* t) * np.sin(x + b * t)
 
@@ -144,7 +143,7 @@ def main():
     t = 0
 
     # dt = int(input("Введите момент времени:"))
-    dt=1
+    dt=2
     U_analytic = analyt_func(x, a, b, c, T[dt])
 
     # явная конечно-разностная схема
@@ -160,7 +159,7 @@ def main():
 
     # схема Кранка - Николсона
     # theta = float(input("Введите параметр theta от 0 до 1:"))
-    theta = 0.25
+    theta = 0.5
     U7 = Krank_Nikolson(K, t, tau, h, a, b, c, x, 1, theta)
     U8 = Krank_Nikolson(K, t, tau, h, a, b, c, x, 2, theta)
     U9 = Krank_Nikolson(K, t, tau, h, a, b, c, x, 3, theta)
